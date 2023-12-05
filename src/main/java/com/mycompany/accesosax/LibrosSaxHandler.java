@@ -37,12 +37,12 @@ public class LibrosSaxHandler extends DefaultHandler{
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
         super.startElement(uri, localName, qName, attributes); //To change body of generated methods, choose Tools | Templates.
         if (qName.equals("Libros")){
-            System.out.println("Listado de libros:");
+            System.out.println("LISTADO DE LIBROS:");
             System.out.println("\n-----------------------");
         }
         else if (qName.equals("Libro")) {
             contador++;
-            System.out.println("Libro "+contador);
+            System.out.println("Libro nº: "+contador);
             System.out.println("Publicado en: " + attributes.getValue(attributes.getQName(0)));//extrae el primer atributo
 
         } else if (qName.equals("Titulo")) {
